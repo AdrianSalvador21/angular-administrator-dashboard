@@ -1,0 +1,82 @@
+<div class="dashboard-section-header">
+  <div class="report-detail-title">
+    <div class="report-approver-title">
+      <h2>Viaje a Aguascalientes</h2>
+      <mat-icon [matMenuTriggerFor]="menu" class="ra-icon cursor-pointer">keyboard_arrow_down</mat-icon>
+    </div>
+    <mat-menu #menu="matMenu" class="report-approver-menu">
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Aprobador del reporte</span>
+        <span style="color: #06a682;">Bob Hernández</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Política de viajes</span>
+        <span style="color: #06a682;">Política de Aguascalientes</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Duración del viaje</span>
+        <span style="color: #06a682;">10 días</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Nombre del proyecto</span>
+        <span style="color: #06a682;">Visita a clientes de Aguascalientes</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Cliente visitado</span>
+        <span style="color: #06a682;">Luis San Marcos</span>
+      </button>
+
+      <button mat-menu-item style="display: flex; justify-content: space-between;">
+        <span>Objetivo del viaje</span>
+        <span style="color: #06a682;">Vender nuevos productos</span>
+      </button>
+    </mat-menu>
+
+
+    <div class="user-assg-img-container">
+      <div>
+        <p class="m-0">Chuck Morales</p>
+        <span class="text-muted">RFC: CH2124MEN</span>
+      </div>
+      <div [ngStyle]="{'background': 'url(' + userImage + ') no-repeat center center', 'background-size': 'cover'}" class="user-assg-img"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="dashboard-section-container mt-2">
+  <div class="row report-detail-table">
+    <div class="col-12 col-sm-6 col-md-3">
+      <h4>Anticipo dado</h4>
+      <p>$15,000 MXN</p>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <h4>Monto gastado</h4>
+      <p>$13,000 MXN</p>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <h4>Facturable</h4>
+      <p>$11,000 MXN</p>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3">
+      <h4>No facturable</h4>
+      <p class="danger">$2,000 MXN</p>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <app-report-table></app-report-table>
+  </div>
+
+  <div class="button-container mt-4">
+    <button class="btn primary-button mr-2 ft-14">Aprobar reporte</button>
+    <button class="btn btn-danger pd-l-r-15 ft-14">Devolver reporte</button>
+  </div>
+</div>

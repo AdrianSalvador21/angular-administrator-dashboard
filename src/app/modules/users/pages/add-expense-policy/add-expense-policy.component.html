@@ -1,0 +1,33 @@
+<div class="dashboard-section-header">
+  <h2>Nueva política de viaje</h2>
+  <p>Creación de una política de viaje</p>
+</div>
+
+<mat-horizontal-stepper [linear]="false" #stepper style="border-radius: 1rem;" (selectionChange)="stepperChange($event)">
+  <mat-step>
+    <ng-template matStepLabel>
+      <div class="" [ngClass]="{'active-stepper': selectedStepper === 0, 'inactive-stepper': selectedStepper !== 0}">
+        Configuración
+      </div>
+    </ng-template>
+    <app-policy-configuration></app-policy-configuration>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>
+      <div class="" [ngClass]="{'active-stepper': selectedStepper === 1, 'inactive-stepper': selectedStepper !== 1}">
+        Categorías
+      </div>
+    </ng-template>
+    <app-categories-table></app-categories-table>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>
+      <div class="" [ngClass]="{'active-stepper': selectedStepper === 2, 'inactive-stepper': selectedStepper !== 2}">
+        Asignación
+      </div>
+    </ng-template>
+    <app-users-assignment></app-users-assignment>
+  </mat-step>
+</mat-horizontal-stepper>
